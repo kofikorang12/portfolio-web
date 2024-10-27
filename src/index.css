@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hero-section styling */
+/* Custom freehand font for the "I am" text */
+.font-handwriting {
+  font-family: "Pacifico", cursive; /* You can use Google Fonts like 'Pacifico' */
+}
+
+/* Dynamic Title Animation (Optional) */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* If you want to animate the text typing effect */
+.dynamic-title {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid yellow;
+  width: fit-content;
+  animation: typing 3s steps(20, end) forwards;
+}
+/* End of hero-section styling */
+
+.bg-pattern-animation {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 50px 50px;
+  animation: movePattern 6s linear infinite;
+}
+
+@keyframes movePattern {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 100px;
+  }
+}
+
+/* TECH STALK STYLING */
+/* Orbiting effect */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(100px) rotate(-180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+.tech-stack-orbit .orbit-icon {
+  animation: orbit 10s ease-in-out infinite; /* Adjust speed */
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.tech-stack-orbit .orbit-icon:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+/* Pause and restart the animation */
+.tech-stack-orbit .orbit-icon:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
