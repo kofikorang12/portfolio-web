@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 const HeroSection = () => {
   // Mouse movement effect for parallax background
   const handleMouseMove = (e) => {
@@ -49,7 +48,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center justify-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-12">
         {/* Enlarged Profile Image */}
         <motion.img
-          src="src/assets/profile.jpg"
+          src="/images/profile.jpg"
           alt="Jeffrey Baah | Software Engineer | Frontend Developer | DevOps"
           className="w-56 h-56 lg:w-80 lg:h-80 rounded-full shadow-lg"
           initial={{ scale: 0 }}
